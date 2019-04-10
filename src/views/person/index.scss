@@ -1,0 +1,132 @@
+@import '../../globalCss/px2-rem';
+
+.person {
+    .top-wrap {
+        padding: px2-to-rem(18);
+        background: #1658bc;
+        box-shadow: 0 0 2px 2px #1658bc;
+
+        .login-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+            
+            .left {
+                h2 {
+                    font-size: 26px;
+                }
+                .desc {
+                    margin-top: 10px;
+                    color: #e0e0e0;
+                    font-size: 12px;
+                }
+            }
+            .right {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .iconfont {
+                    color: #fff;
+                    font-size: 18px;
+                }
+            }
+            img {
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+            }
+        }
+
+        .user-box {
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+            .left {
+                margin-left: 20px;
+            }
+        }       
+
+        .collection-data {
+            // 父相
+            position: relative;
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            color: #fff;
+            font-size: 12px;
+
+            .col-line{
+                // 子绝
+                position: absolute;
+                width: 1px;
+                height: 20px;
+                background: #eaeaea;
+                top: 50%;
+                transform: translateY(-50%);
+                &:nth-child(4) {
+                    left: 30%;
+                }
+                &:nth-child(5) {
+                    right: 30%;
+                }
+            }
+
+            .collection-item{
+                .title {
+                    font-size: 16px;
+                    .little-title {
+                        font-size: 12px;
+                    }
+                }
+                .desc {
+                    margin-top: 4px;
+                }
+                &:nth-child(1){
+                    width: 30%;
+                }
+                &:nth-child(2){
+                    width: 40%;
+                }
+                &:nth-child(3){
+                    width: 30%;
+                }
+            }
+        }
+    }
+
+    .menu {
+        margin-top: 40px;
+        padding: px2-to-rem(18);
+       .menu-item {
+           display: flex;
+           justify-content: space-between;
+           padding: 8px 0;
+           border-bottom: 1px solid #eee;
+           align-items: center;
+           .menu-item-left {
+               display: flex;
+               align-items: center;
+               .menu-item-text {
+                    margin-left: 10px;
+               }
+               .iconfont {
+                    font-size: 40px;
+               }
+               .icon-xiugaigerenxinxi {
+                    color: #1083fe;
+               }
+               .icon-jiazhi1 {
+                    color: #fe18ed;
+               }
+               .icon-aihao- {
+                    color: #f4de51;
+               }
+           }
+       }
+    }
+   .close{
+       padding: 0 px2-to-rem(18);
+   }
+}

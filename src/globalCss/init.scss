@@ -1,0 +1,37 @@
+@import './px2-rem.scss';
+
+body {
+    font-size: 14px!important;//给body设置字体大小为14px，优先级最高
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;//去掉列表标签的小点样式
+}
+
+img {
+    display: block; //让img变为块级元素
+    width: 100%; //占屏幕的100%宽度
+}
+
+h1,h2,h3,h4 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #555;
+}
+
+.container{
+    padding: px2-to-rem(18);
+}
+
+input {
+    outline: none;
+    border: 0px;
+}

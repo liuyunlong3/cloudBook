@@ -1,0 +1,7 @@
+$rem: 1rem;
+
+@function px2-to-rem($n) {
+    @return 10 / 750*$n*$rem;
+};
+
+//这里的代码是淘宝的移动端适配方案。 
