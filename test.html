@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 利用利牛云提供的方法进行文件上传 -->
+    <!-- <form action="http://upload-z1.qiniup.com/" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="hidden" name="token" value="hiaSMM1QqBT-0Q0KywiDrpp_tXbgBz8p1mFXkoil:j9E4O8MyS5MyQKenme5Wd5fNZew=:eyJyZXR1cm5Cb2R5Ijoie1wia2V5XCI6ICQoa2V5KSwgXCJoYXNoXCI6ICQoZXRhZyksIFwidXJsXCI6IFwiaHR0cDovL3BibC55YW9qdW5yb25nLmNvbS8kKGtleSlcIn0iLCJzY29wZSI6InB1YmxpYyIsImRlYWRsaW5lIjoxNTU0OTUwNTA0fQ==">
+        <button>提交</button>
+    </form> -->
+    <!-- 上面必须要有file，token，和action -->
+    <!-- 利用axios进行文件上传 -->
+    <form action="#" id="form">
+        <input type="file" id="file">
+    </form>
+    <img alt="">
+    <button id="btn">上传</button>
+    <script src="./axios.js"></script>
+    <script>
+        var form = document.querySelector("#form")
+        var file = document.querySelector("#file")
+        var img = document.querySelector("img")
+        var token = ''
+        axios.get('http://upload.yaojunrong.com/getToken').then(res=>{
+            token = res.data.data
+        })
+        file.onchange = function(event){
+            console.log(event.target.files[0])
+            // event.target.files[0]是File文件
+            var file = event.target.files[0];
+            var form = new FormData()
+            form.append('file',file)
+            form.append('token',token)
+            // 下面的是上传文件
+            axios.post('http://upload-z1.qiniup.com/',form).then(res=>{
+                var url = res.data.url
+                img.src = url;
+            })
+        }
+    </script>
+    
+
+</body>
+</html>

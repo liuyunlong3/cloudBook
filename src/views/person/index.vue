@@ -66,7 +66,7 @@
             </div>
         </div><!--top-wrap end-->
         <div class="menu">
-            <router-link to="#" class="menu-item">
+            <router-link to="changePerson" class="menu-item">
                 <div class="menu-item-left">
                     <i class="iconfont icon-xiugaigerenxinxi"></i>
                     <span class="menu-item-text">修改个人信息</span>

@@ -69,6 +69,22 @@ const router = new Router({
         title: '注册'
       },
       component: () => import('@/views/register')
+    },
+    {
+      path:'/changePerson',
+      name: 'changePerson',
+      meta: {
+        title: '修改信息'
+      },
+      component: ()=> import('@/views/changePerson')
+    },
+    {
+      path: '/test',
+      name: 'test',
+      meta: {
+        title: '测试'
+      },
+      component: ()=> import('@/views/test')
     }
   ]
 })
